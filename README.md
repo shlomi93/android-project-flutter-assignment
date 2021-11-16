@@ -1,15 +1,15 @@
-סעיף 1:
-המחלקה שמממשת את ה-controller נקראת SnappingSheetController.
-פיצ'רים:
-•	snapToPosition – קפיצה למיקום מסויים (אנימציה)
-•	setSnappingSheetPosition – קביעת מיקום (ללא אנימציה)
-•	currentPosition – השגת המיקום הנוכחי של ה-sheet
-•	currentlySnapping – בדיקה האם ה-sheet באמצע snapping
-•	stopCurrentSnapping – עצירת snapping נוכחי
+Q1:
+The class which implements the controller is SnappingSheetController.
+Features:
+•	snapToPosition - set a specific position in the sheet (with animation)
+•	setSnappingSheetPosition – same but without animation.
+•	currentPosition – get current position in the sheet
+•	currentlySnapping – check if the sheet is currently snapping
+•	stopCurrentSnapping – stop current snapping
 
-סעיף 2:
-•	מי ששולט על האנימציה זה השדה _animationController שהוא טיפוס מסוג AnimationController
+Q2:
+•	_animationController is the one who controls the animation. This object is from type AnimationController
 
-סעיף 3:
-•	ל- GestureDetectorיש הרבה יותר שדות (תכונות ופיצ'רים) מאשר ל-InkWell 
-•	ל-InkWell יש אפשרות להוסיף אנימציות (למשל ripple) וצבעים ול- GestureDetector אין את האפשרות הזו.
+Q3:
+•	GestureDetector has a lot more options and features than InkWell
+•	InkWell has the options to add decorations such as colors, or ripple, etc.
