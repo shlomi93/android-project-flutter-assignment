@@ -1,16 +1,27 @@
-# hello_me
 
-A new Flutter application.
+# *Q1*:
+The class which implements the controller is SnappingSheetController.
 
-## Getting Started
+Features:
 
-This project is a starting point for a Flutter application.
+* snapToPosition - set a specific position in the sheet (with animation)
 
-A few resources to get you started if this is your first Flutter project:
+* setSnappingSheetPosition – same but without animation.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+* currentPosition – get current position in the sheet
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* currentlySnapping – check if the sheet is currently snapping
+
+* stopCurrentSnapping – stop current snapping
+
+# *Q2*:
+
+_animationController is the one who controls the animation.
+* This object is from type AnimationController
+
+# *Q3*:
+
+* GestureDetector has a lot more options and features than InkWell
+
+* InkWell has the options to add decorations such as colors, or ripple, etc.
+
