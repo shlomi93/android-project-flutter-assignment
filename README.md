@@ -1,11 +1,12 @@
-Q1:\n
+# The largest heading
+Q1:
 The class which implements the controller is SnappingSheetController.
 Features:
-•	snapToPosition - set a specific position in the sheet (with animation)
-•	setSnappingSheetPosition – same but without animation.
-•	currentPosition – get current position in the sheet
-•	currentlySnapping – check if the sheet is currently snapping
-•	stopCurrentSnapping – stop current snapping
+*snapToPosition - set a specific position in the sheet (with animation)
+*setSnappingSheetPosition – same but without animation.
+*currentPosition – get current position in the sheet
+*currentlySnapping – check if the sheet is currently snapping
+*stopCurrentSnapping – stop current snapping
 
 Q2:
 •	_animationController is the one who controls the animation. This object is from type AnimationController
