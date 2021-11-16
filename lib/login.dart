@@ -254,7 +254,7 @@ class _LoginState extends State<Login> {
       final ref = FirebaseStorage.instance.ref().child('default.png');
       Provider.of<LoginStatus>(context, listen: false).userAvatarUrl =
           await ref.getDownloadURL();
-      print('No avatar for user - use Default.png');
+      //print('No avatar for user - use Default.png');
     }
 
     /// Very bad use of not-null (!) operator

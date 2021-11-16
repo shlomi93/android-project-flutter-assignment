@@ -10,8 +10,6 @@ import 'package:file_picker/file_picker.dart';
 import 'package:snapping_sheet/snapping_sheet.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:english_words/english_words.dart';
-
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hello_me/Favorite.dart';
@@ -397,6 +395,7 @@ class _RandomWordsState extends State<RandomWords> {
   ///****************************************************************************************///
 
   void _pushSavedFavorite() {
+
     Navigator.of(context).push(
       MaterialPageRoute<void>(
         builder: (context) {
@@ -443,18 +442,13 @@ class _RandomWordsState extends State<RandomWords> {
           loggedIn = Provider.of<LoginStatus>(context, listen: false).loggedIn;
           if (loggedIn) {
             _saved.forEach((element) {
-              /// add all new choices to user firebase
+              /// add to user firebase
               addToUserFavorite(element.asPascalCase);
             });
-
-            /// get user ID
             String uid =
                 Provider.of<LoginStatus>(context, listen: false).userID;
 
-            /// clear local Set of choices
-            _saved.clear();
-
-            /// get all favorite from user firebase
+            /// add all favorite to user firebase
             _firestore.collection('users').doc(uid).snapshots().listen((event) {
               event.data()?.forEach((key, value) {
                 /// separate PascalWord to 2 Strings using regular expressions.
@@ -467,6 +461,14 @@ class _RandomWordsState extends State<RandomWords> {
             });
           }
         }));
+
+    setState(() {
+      loggedIn = Provider.of<LoginStatus>(context, listen: false).loggedIn;
+      if (loggedIn) {
+        /// remove from favorite list
+        _saved.clear();
+      }
+    });
   }
 }
 

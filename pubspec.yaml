@@ -43,6 +43,8 @@ dependencies:
   modal_bottom_sheet: ^2.0.0
   file_picker: ^4.2.3
   path: ^1.8.0
+  utility: ^1.0.1
+  shared_preferences: ^2.0.8
 
 dev_dependencies:
   flutter_test:
