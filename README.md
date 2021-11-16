@@ -1,4 +1,4 @@
-Q1:
+Q1:\n
 The class which implements the controller is SnappingSheetController.
 Features:
 •	snapToPosition - set a specific position in the sheet (with animation)
